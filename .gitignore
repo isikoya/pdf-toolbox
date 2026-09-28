@@ -1,0 +1,29 @@
+# Build output: the zip is attached to a Release, not committed
+dist/
+*.zip
+
+# Output folders the toolbox creates while you are testing
+OCR PDFs/
+Compressed/
+Word/
+Excel/
+Text/
+Images/
+PDFs/
+*.pdf
+*.docx
+*.xlsx
+*.txt
+!README.txt
+
+# Logs
+OCR log.txt
+ocr_log.txt
+Page count.csv
+Search results.csv
+
+# Windows and editor noise
+Thumbs.db
+desktop.ini
+*.lnk
+.vscode/
