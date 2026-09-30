@@ -1,6 +1,6 @@
 {
-  "version": "1.0.1",
-  "released": "2026-09-28",
-  "download": "https://github.com/isikoya/pdf-toolbox/releases/latest",
-  "notes": "Fixes the update check."
+    "version":  "1.0.3",
+    "released":  "2026-09-30",
+    "download":  "https://github.com/isikoya/pdf-toolbox/releases/latest",
+    "notes":  "v1.0.3"
 }
