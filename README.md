@@ -34,8 +34,9 @@ permission when installing Tesseract or Ghostscript.
 | OCR | Makes scanned PDFs searchable. Runs several files at once and writes a log. |
 | Merge | Combine PDFs, in an order you set by dragging. |
 | Split, extract, delete, rotate, insert, rearrange | Page-level work, with thumbnails to pick from. |
-| Compress | Three levels, with before and after sizes. |
+| Compress | Six levels by image resolution. Shows what your scans are, estimates the result, reports before and after. |
 | Convert | Office to PDF, and PDF to Word, Excel tables, text or images. |
+| Bank statement to Excel | Downloaded or scanned statements (FNB, Standard Bank, Absa, Nedbank, Capitec and similar). Every row is checked against the running balance with live formulas; rows that do not add up are red. |
 | Search | Find text across a folder of PDFs. |
 | Count pages | Totals across a folder, with an optional CSV. |
 | Remove a password | Needs the password. Writes an unlocked copy. |
@@ -52,6 +53,7 @@ if the window will not open.
 - PDF to Excel guesses where the columns are. Tie the totals back to the PDF
   before using any figure.
 - PDF to Word rebuilds the layout, it does not copy it.
+- Bank statement workbooks: a row that adds up has been confirmed by the balance, but dates are not covered by that check. Check red rows and amber cells against the PDF, and tie the closing balance on the Summary sheet.
 - OCR is not perfect. Spot-check figures on anything that matters.
 - Every task writes a new file. Your originals are left alone.
 
@@ -64,9 +66,13 @@ is open source.
 
 ## Updates
 
-Open **About this tool** and press **Check for a new version**. It reads
-`version.json` from this repository and tells you if there is a newer release.
-It never installs anything by itself.
+Open **About this tool** and press **Check for a new version**. If there is a
+newer release, press **Download and install it**: the toolbox downloads the
+release, checks it against the published checksum, saves your current version
+alongside the folder, then closes and reopens on the new one.
+
+It never updates on its own. If the download fails any check, nothing on the
+machine is touched and you are pointed at the download page instead.
 
 ## Publishing a new version (for the maintainer)
 
@@ -74,12 +80,16 @@ It never installs anything by itself.
 2. Run `Build Release.ps1`. It writes `dist\PDF Toolbox v<version>.zip` and
    regenerates `version.json`.
 3. Commit and push `version.json`.
-4. Create a Release, tag it `v<version>`, and attach the zip.
+4. Create a Release, tag it exactly `v<version>`, and attach the zip under the
+   name the build script prints.
 
 Step 3 is what makes the update check notice. Step 4 is what people download.
+The tag and file name must match what `version.json` records, or in-app
+updating will 404 and fall back to opening the page.
 
 ## Problems
 
 Open **About this tool**, run **Check setup** first: most faults are a missing
-install. If that does not sort it, email the address on the About page and say
-which version you are on and what you were doing.
+install. If that does not sort it, press **Copy details for an email** on the
+About page, then email the address there and paste it in. That tells the
+maintainer your version, what is installed and what was on screen.
