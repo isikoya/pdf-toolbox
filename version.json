@@ -1,9 +1,9 @@
 {
-    "version":  "1.0.7",
+    "version":  "1.0.8",
     "released":  "2026-09-30",
     "download":  "https://github.com/isikoya/pdf-toolbox/releases/latest",
-    "zip":  "https://github.com/isikoya/pdf-toolbox/releases/download/v1.0.7/PDF.Toolbox.v1.0.7.zip",
-    "size":  109704,
-    "sha256":  "51831359b7b79906d85e02661fcf56478d6a7ceb3b118e6a8dd9fe2926b3b746",
-    "notes":  "v1.0.7"
+    "zip":  "https://github.com/isikoya/pdf-toolbox/releases/download/v1.0.8/PDF.Toolbox.v1.0.8.zip",
+    "size":  115750,
+    "sha256":  "42ee574a652800d608dd7aa1927c5847201a5b5e9c2324aeb3191df84ef46a11",
+    "notes":  "v1.0.8"
 }
