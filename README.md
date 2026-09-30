@@ -36,7 +36,7 @@ permission when installing Tesseract or Ghostscript.
 | Split, extract, delete, rotate, insert, rearrange | Page-level work, with thumbnails to pick from. |
 | Compress | Six levels by image resolution. Shows what your scans are, estimates the result, reports before and after. |
 | Convert | Office to PDF, and PDF to Word, Excel tables, text or images. |
-| Bank statement to Excel | Downloaded or scanned statements (FNB, Standard Bank, Absa, Nedbank, Capitec and similar). Every row is checked against the running balance with live formulas; rows that do not add up are red. |
+| Bank statement to Excel | Downloaded or scanned statements (FNB, Standard Bank, Absa, Nedbank, Capitec and similar), including a statement page inside a larger audit pack: pages without a statement table are skipped and named on the Summary sheet. Ruled grids and highlighter on scans are cleaned before OCR. Every row is checked against the running balance with live formulas; rows that do not add up are red. |
 | Search | Find text across a folder of PDFs. |
 | Count pages | Totals across a folder, with an optional CSV. |
 | Remove a password | Needs the password. Writes an unlocked copy. |
@@ -54,6 +54,7 @@ if the window will not open.
   before using any figure.
 - PDF to Word rebuilds the layout, it does not copy it.
 - Bank statement workbooks: a row that adds up has been confirmed by the balance, but dates are not covered by that check. Check red rows and amber cells against the PDF, and tie the closing balance on the Summary sheet.
+- In an audit pack, check the Summary sheet's "Statement found on" line names the right pages. A balance printed on another page (a reconciliation, say) is only used if the statement's own rows agree with it.
 - OCR is not perfect. Spot-check figures on anything that matters.
 - Every task writes a new file. Your originals are left alone.
 
